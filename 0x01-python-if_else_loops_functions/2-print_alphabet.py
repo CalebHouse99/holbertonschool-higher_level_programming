@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 for i in range(97, 123):
-	x = chr(i)
-	print(x.format(x), end='')
+    x = chr(i)
+    print(x.format(x), end='')
