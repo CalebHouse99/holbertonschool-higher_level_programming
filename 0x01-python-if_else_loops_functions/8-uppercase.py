@@ -6,5 +6,5 @@ def uppercase(str):
         current_int = ord(str[i])
         if current_int > 96 and current_int < 123:
             current_int = current_int - 32
-        print(chr(current_int), end="")
-    print('')
+        print("{}".format(chr(current_int)), end="")
+    print("{}".format(''))
