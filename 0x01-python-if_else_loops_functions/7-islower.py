@@ -4,7 +4,7 @@
 def islower(c):
     if c == ''
         return
-    if c.islower():
+    elif c.islower():
         return True
     else:
         return False
