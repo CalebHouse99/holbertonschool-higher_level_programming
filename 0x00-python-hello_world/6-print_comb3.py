@@ -9,12 +9,13 @@ while i < 90:
     if tens > 0 and ones == 0:
         ones = ones_savepoint
         i = (tens * 10) + ones
+        if i == 89:
+            print("{}".format(i), end="\n")
+            i += 1
+            continue
         print("{}{}".format(tens, ones), end=", ")
         i += 1
         continue
-    elif i == 89:
-        print("{}".format(i), end="\n")
-        i += 1
     else:
         print("{}{}".format(tens, ones), end=", ")
         i += 1
