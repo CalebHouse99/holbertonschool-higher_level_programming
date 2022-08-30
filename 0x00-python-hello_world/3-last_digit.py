@@ -10,4 +10,4 @@ if digit < 6:
     last_message = "and is less than 6 and not 0"
 if digit == 0:
     last_message = "and is 0"
-print("The last digit of", number, "is", digit, last_message)
+print("Last digit of", number, "is", digit, last_message)
