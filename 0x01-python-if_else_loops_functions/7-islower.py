@@ -2,6 +2,8 @@
 
 
 def islower(c):
+    if c == ''
+        return
     if c.islower():
         return True
     else:
