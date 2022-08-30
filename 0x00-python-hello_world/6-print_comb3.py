@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-i = 0
+i = 1
 
 while i < 90:
     tens = (i % 100) // 10
