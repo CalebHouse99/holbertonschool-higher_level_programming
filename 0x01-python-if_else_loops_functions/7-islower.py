@@ -2,7 +2,7 @@
 
 
 def islower(c):
-    if c == ''
+    if c == '':
         return
     elif c.islower():
         return True
