@@ -18,4 +18,4 @@ else:
     print("{} arguments:".format(len(sys.argv) - 1), end="\n")
     for i in range(1, n):
         if i < n:
-            print("{}: {}".format(len(sys.argv) - 1, sys.argv[i]))
+            print("{}: {}".format(i, sys.argv[i]))
