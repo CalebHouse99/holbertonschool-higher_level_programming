@@ -8,6 +8,6 @@ if __name__ == "__main__":
     main()
 
 if sys.argv == None:
-    print("{}.", len(sys.argv))
+    print("{}.".format(len(sys.argv)))
 else:
-    print("{}: {}"len(sys.argv))
+    print("{}: {}".format(len(sys.argv), sys.argv))
