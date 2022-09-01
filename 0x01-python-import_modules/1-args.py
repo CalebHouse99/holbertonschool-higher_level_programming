@@ -14,5 +14,5 @@ elif len(sys.argv) - 1 == 1:
 else:
     print("{} arguments:".format(len(sys.argv) - 1), end="")
     for i in sys.argv:
-        if sys.argv[i]:
+        if sys.argv[int(i)]:
             print("{}{}:{}".format(len(sys.argv) - 1, '\n', len(sys.argv) - 1, sys.argv[i]))
