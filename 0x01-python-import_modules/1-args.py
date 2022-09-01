@@ -12,4 +12,4 @@ if len(sys.argv) - 1 == 0:
 elif len(sys.argv) - 1 == 1:
     print("{} argument:{}1: {}".format(len(sys.argv) - 1, '\n', sys.argv[1]))
 else:
-    print("{} arguments:{}{}:{}".format(len(sys.argv) - 1, '\n', len(sys.argv) - 1, sys.argv[1:])))
+    print("{} arguments:{}{}:{}".format(len(sys.argv) - 1, '\n', len(sys.argv) - 1, sys.argv[1:]))
