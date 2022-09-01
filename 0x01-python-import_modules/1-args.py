@@ -14,7 +14,7 @@ if len(sys.argv) - 1 == 0:
 elif len(sys.argv) - 1 == 1:
     print("{} argument:{}1: {}".format(len(sys.argv) - 1, '\n', sys.argv[1]))
 else:
-    print("{} arguments:".format(len(sys.argv) - 1), end="")
+    print("{} arguments:".format(len(sys.argv) - 1), end="\n")
     for i in range(1, n):
-        if i < len(sys.argv) - 1:
-            print("{}{}:{}".format(len(sys.argv) - 1, '\n', len(sys.argv) - 1, sys.argv[i]))
+        if i < n:
+            print("{}:{}".format(len(sys.argv) - 1, n - 1, sys.argv[i]))
