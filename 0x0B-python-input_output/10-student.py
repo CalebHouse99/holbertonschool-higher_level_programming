@@ -13,7 +13,7 @@ class Student:
     def to_json(self, attrs=None):
         self.attrs = attrs
         at_list = {}
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         for i in attrs:
             if i in self.__dict__:
