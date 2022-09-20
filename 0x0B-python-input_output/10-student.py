@@ -11,12 +11,11 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """return the list"""
-        self.attrs = attrs
-        at_list = {}
+        """class to json"""
         if attrs is None:
-            return self.__dict__
-        for i in attrs:
-            if i in self.__dict__:
-                at_list[i] = self.__dict__[i]
-        return at_list
+            return (vars(self))
+        attributes = {}
+        for key, value in vars(self).items():
+            if key in attrs:
+                attributes[key] = value
+        return (attributes)
