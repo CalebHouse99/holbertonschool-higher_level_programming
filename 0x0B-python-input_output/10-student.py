@@ -11,6 +11,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
+        """return the list"""
         self.attrs = attrs
         at_list = {}
         if attrs is None:
