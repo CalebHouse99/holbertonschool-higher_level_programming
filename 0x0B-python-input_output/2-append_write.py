@@ -3,6 +3,7 @@
 """
 
 
+
 def append_write(filename="", text=""):
     """Append to end of a file"""
     with open(filename, "a") as file:
