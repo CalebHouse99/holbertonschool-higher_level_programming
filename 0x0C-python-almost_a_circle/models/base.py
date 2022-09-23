@@ -4,7 +4,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialization"""
+        """Initialization of the self"""
         if id is not None:
             self.id = id
         else:
