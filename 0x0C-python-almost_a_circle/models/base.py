@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Base Module"""
+
+
 class Base:
     """Almost a Circle"""
     __nb_objects = 0
