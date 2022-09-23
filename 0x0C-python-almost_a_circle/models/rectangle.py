@@ -10,35 +10,43 @@ class Rectangle(Base):
         self.__width = width
         self.__height = height
         self.__x = x
-        self.__y= y
+        self.__y = y
+
     @property
     def width(self):
         """width of rectangle"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """Setter of the width"""
         self.__width = value
+
     @property
     def height(self):
         """height of rectangle"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """Setter of the height"""
         self.__height = value
+
     @property
     def x(self):
         """X of rectangle"""
         return self.__x
+
     @x.setter
     def x(self, value):
         """Setter of the x"""
         self.__x = value
+
     @property
     def y(self):
         """y of rectangle"""
         return self.__y
+
     @y.setter
     def y(self, value):
         """Setter of the y"""
