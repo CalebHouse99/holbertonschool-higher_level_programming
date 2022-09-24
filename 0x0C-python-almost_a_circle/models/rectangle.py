@@ -80,3 +80,9 @@ class Rectangle(Base):
             for j in range(self.width):
                 brick = brick + "#"
             print(brick, end="\n")
+
+    def __str__(self):
+        """Overriding the str method"""
+        a = "[Rectangle] (" + str(self.id) + ") " + str(self.x) + "/"
+        b = a + str(self.y) + " - " + str(self.width) + "/" + str(self.height)
+        return b
