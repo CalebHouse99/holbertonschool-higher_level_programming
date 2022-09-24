@@ -51,3 +51,16 @@ class Base:
                 pumpkin = cls(6)
             pumpkin.update(**dictionary)
             return pumpkin
+
+    @classmethod
+    def load_from_file(cls):
+        """returns list of instances"""
+        new_list = []
+        try:
+            with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
+                dictionary_list = cls.from_json_string(f.read())
+                for dictionary in dictionary_list:
+                    new_list.append(cls.create(**dictionary))
+                return new_list
+        except FileNotFoundError:
+            return new_list
