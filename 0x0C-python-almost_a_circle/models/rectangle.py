@@ -8,15 +8,30 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialization of the self"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
         """width of rectangle"""
         return self.__width
+
+    @property
+    def height(self):
+        """height of rectangle"""
+        return self.__height
+
+    @property
+    def x(self):
+        """X of rectangle"""
+        return self.__x
+
+    @property
+    def y(self):
+        """y of rectangle"""
+        return self.__y
 
     @width.setter
     def width(self, value):
@@ -26,12 +41,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-
-    @property
-    def height(self):
-        """height of rectangle"""
-        return self.__height
-
+    
     @height.setter
     def height(self, value):
         """Setter of the height"""
@@ -41,11 +51,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-    @property
-    def x(self):
-        """X of rectangle"""
-        return self.__x
-
     @x.setter
     def x(self, value):
         """Setter of the x"""
@@ -54,11 +59,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
-
-    @property
-    def y(self):
-        """y of rectangle"""
-        return self.__y
 
     @y.setter
     def y(self, value):
