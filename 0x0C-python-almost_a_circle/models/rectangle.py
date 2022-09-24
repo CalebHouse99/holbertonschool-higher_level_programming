@@ -41,7 +41,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @height.setter
     def height(self, value):
         """Setter of the height"""
