@@ -14,3 +14,14 @@ class Square(Rectangle):
         a = "[Square] (" + str(self.id) + ") " + str(self.x) + "/"
         b = a + str(self.y) + " - " + str(self.height)
         return b
+
+    @property
+    def size(self):
+        """Returning the size attribute"""
+        return self.height
+
+    @size.setter
+    def size(self, value):
+        """Setter of the size"""
+        self.height = value
+        self.width = value
