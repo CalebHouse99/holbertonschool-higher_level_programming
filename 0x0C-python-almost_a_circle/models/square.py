@@ -59,10 +59,3 @@ class Square(Rectangle):
             'y': self.y
             }
         return sq_dictionary
-
-    def to_json_string(list_dictionaries):
-        """Json string representation of dictionaries"""
-        if list_dictionaries is None or len(list_dictionaries) == 0:
-            return "[]"
-        json_string = json.dumps(list_dictionaries)
-        return json_string
