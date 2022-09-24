@@ -75,8 +75,12 @@ class Rectangle(Base):
 
     def display(self):
         """Prints out the rectangle"""
+        for z in range(self.y):
+            print("")
         for i in range(self.height):
             brick = ""
+            for a in range(self.x):
+                brick = brick + " "
             for j in range(self.width):
                 brick = brick + "#"
             print(brick, end="\n")
