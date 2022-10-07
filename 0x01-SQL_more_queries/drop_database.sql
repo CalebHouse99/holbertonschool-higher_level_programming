@@ -1,0 +1,2 @@
+-- DROP IT LIKE IT'S HOT
+DROP DATABASE hbtn_0d_usa;
