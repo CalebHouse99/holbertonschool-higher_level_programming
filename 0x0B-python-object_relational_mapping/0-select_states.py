@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This script grabs the username and password from user to print the table
+"""
 import MySQLdb
 import sys
 
