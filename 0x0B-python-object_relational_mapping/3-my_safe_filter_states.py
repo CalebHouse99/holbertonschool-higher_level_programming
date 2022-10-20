@@ -13,7 +13,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE \
         states.name LIKE BINARY %(state)s ORDER BY id ASC;",
-        {'state': sys.argv[4]})
+                {'state': sys.argv[4]})
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
