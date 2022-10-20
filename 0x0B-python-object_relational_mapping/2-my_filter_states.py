@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = conn.cursor()
     cur.execute("""SELECT * FROM states WHERE states.name\
-                 LIKE BINARY 'N%' ORDER BY id ASC;""")
+                COLLATE SQL_Latin1_General_CP1_CS_AS LIKE 'N%' ORDER BY id ASC;""")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
