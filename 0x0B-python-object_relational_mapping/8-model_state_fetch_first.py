@@ -4,8 +4,11 @@
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
+from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.orm.exc import MultipleResultsFound
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
+
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
@@ -14,11 +17,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    first_row = []
-    for state in session.query(State).order_by(State.id):
-        first_row.append("{}: {}".format(state.id, state.name))
-    if first_row[0] is not None:
-        print(first_row[0])
+    state = session.query(State).order_by(State.id).first()
+    if state.name is not None:
+        print("{}: {}".format(state.id, state.name))
     else:
         print("\n")
     session.close()
