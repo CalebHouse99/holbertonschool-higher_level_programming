@@ -18,8 +18,5 @@ if __name__ == "__main__":
     session = Session(engine)
     state = session.query(State).order_by(State.id).first()
 
-    try:
-        print("{}: {}".format(state.id, state.name))
-    except NoResultFound:
-        print('\n')
+    print("{}: {}".format(state.id, state.name))
     session.close()
