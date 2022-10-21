@@ -21,5 +21,5 @@ if __name__ == "__main__":
     try:
         print("{}: {}".format(state.id, state.name))
     except NoResultFound:
-        print("Nothing\n")
+        print("\n")
     session.close()
