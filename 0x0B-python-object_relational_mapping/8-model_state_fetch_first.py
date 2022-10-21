@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
     state = session.query(State).order_by(State.id).first()
-    if state.id and len(state.name) > 0:
+    if state.id and state.name:
         print("{}: {}".format(state.id, state.name))
     else:
         print()
