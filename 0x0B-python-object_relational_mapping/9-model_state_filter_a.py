@@ -16,7 +16,11 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
+    block = []
+    substring = "a"
     for state in session.query(State).order_by(State.id).all():
-        if "a" in state:
-            print("{}: {}".format(state.id, state.name))
+        block.append("{}: {}".format(state.id, state.name))
+    for i in block:
+        if substring in i:
+            print(i)
     session.close()
