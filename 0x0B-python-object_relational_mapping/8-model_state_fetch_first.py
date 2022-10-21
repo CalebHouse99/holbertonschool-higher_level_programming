@@ -5,7 +5,6 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sqlalchemy.orm.exc import NoResultFound
-from sqlalchemy.orm.exc import MultipleResultsFound
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 
@@ -19,8 +18,8 @@ if __name__ == "__main__":
     session = Session(engine)
     state = session.query(State).order_by(State.id).first()
 
-    if state:
+    try:
         print("{}: {}".format(state.id, state.name))
-    else:
+    except NoResultFound:
         print()
     session.close()
