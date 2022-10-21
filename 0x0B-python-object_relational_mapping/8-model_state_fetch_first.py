@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
     first_row = []
-    for state in session.query(State).order_by(State.id).all():
+    for state in session.query(State).order_by(State.id):
         first_row.append("{}: {}".format(state.id, state.name))
     if first_row[0] is not None:
         print(first_row[0])
