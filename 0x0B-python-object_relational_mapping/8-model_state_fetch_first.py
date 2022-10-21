@@ -17,8 +17,8 @@ if __name__ == "__main__":
 
     session = Session(engine)
     state = session.query(State).order_by(State.id).first()
-    if state.id and state.name:
-        print("{}: {}".format(state.id, state.name))
-    else:
+    if not state.id or not state.name:
         print()
+    else:
+        print("{}: {}".format(state.id, state.name))
     session.close()
