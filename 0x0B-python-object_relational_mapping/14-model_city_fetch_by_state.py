@@ -16,7 +16,9 @@ if __name__ == "__main__":
                                    sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    state_names = ["California", "Arizona", "Texas", "New York", "Nevada"]
+    state_names = []
+    for state in session.query(State).order_by(State.id).all():
+        state_names.append(state.name)
     for thing in session.query(City).order_by(City.id).all():
         print("{}: ({}) {}".format(state_names[thing.state_id - 1],
                                    thing.id, thing.name))
