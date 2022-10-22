@@ -22,4 +22,4 @@ if __name__ == "__main__":
     for thing in session.query(City).order_by(City.id).all():
         print("{}: ({}) {}".format(state_names[thing.state_id - 1],
                                    thing.id, thing.name))
-        session.close()
+    session.close()
