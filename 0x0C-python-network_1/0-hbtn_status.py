@@ -3,6 +3,7 @@
 from urllib import request
 
 with request.urlopen('https://intranet.hbtn.io/status') as response:
+    print("Body response:")
     response = response.read()
     print("    - type: {}".format(str(type(response))))
     print("    - content: {}".format(str(response)))
