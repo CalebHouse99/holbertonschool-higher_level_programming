@@ -1,3 +1,3 @@
-try: urllib.request.urlopen(req)
-except urllib.error.URLError as e:
-    print(e.reason)
+#!/usr/bin/python3
+"""Checks for errors unlike previous tasks"""
+from urllib
