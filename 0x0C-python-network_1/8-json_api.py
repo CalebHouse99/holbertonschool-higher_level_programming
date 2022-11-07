@@ -17,7 +17,7 @@ if __name__ == "__main__":
         id = dist.get('id')
         name = dict.get('name')
         if len(dict) == 0:
-            print("no result")
+            print("No result")
         else:
             print("[{}] {}".format(id, name))
     except Exception as e:
