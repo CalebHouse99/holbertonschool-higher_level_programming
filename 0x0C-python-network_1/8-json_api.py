@@ -10,7 +10,7 @@ if __name__ == "__main__":
         q = ""
     else:
         q = argv[1]
-    
+
     req = requests.post(url, data={'q': q})
     try:
         dict = req.json()
@@ -19,6 +19,6 @@ if __name__ == "__main__":
         if len(dict) == 0:
             print("no result")
         else:
-            print("")
+            print("[{}] {}".format(id, name))
     except Exception as e:
         print("Not a valid JSON")
