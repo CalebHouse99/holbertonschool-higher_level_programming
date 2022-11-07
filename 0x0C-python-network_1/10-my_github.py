@@ -6,7 +6,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    url = ""
+    url = "https://api.github.com/user"
     username = argv[1]
     token = argv[2]
     req = requests.get(url, auth=HTTPBasicAuth(username, token)).json()
